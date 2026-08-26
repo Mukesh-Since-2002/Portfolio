@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>Mukesh Thakur | Fullstack Web Developer & Software Developer</title>
+  <meta name="title" content="Mukesh Thakur | Fullstack Web Developer & Software Developer">
+  <meta name="description" content="Portfolio of Mukesh Thakur, a Fullstack Web Developer & Software Developer specializing in Python, Selenium, PyAutoGUI, HTML, CSS, JavaScript, and complex desktop/web automation.">
+  <meta name="keywords" content="Mukesh Thakur, Fullstack Web Developer, Software Developer, Python Automation, Selenium, PyAutoGUI, JavaScript, HTML CSS, Web Applications">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Favicon (replace images/favicon.png with your own icon file) -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Font Awesome icon library (CDN, no download needed) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/">
+  <meta property="og:title" content="Mukesh Thakur | Fullstack Web Developer & Software Developer">
+  <meta property="og:description" content="Explore fullstack applications, software development projects, and automation tools by Mukesh Thakur.">
+  <meta property="og:image" content="https://yourwebsite.com/preview-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yourwebsite.com/">
+  <meta property="twitter:title" content="Mukesh Thakur | Fullstack Web Developer & Software Developer">
+  <meta property="twitter:description" content="Explore fullstack applications, software development projects, and automation tools by Mukesh Thakur.">
+  <meta property="twitter:image" content="https://yourwebsite.com/preview-image.jpg">
+
+  <!-- Structured Data / JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mukesh Thakur",
+    "jobTitle": "Fullstack Web Developer & Software Developer",
+    "email": "mailto:mukesht9930@gmail.com",
+    "knowsAbout": ["Fullstack Web Development", "Software Engineering", "Python", "Selenium", "PyAutoGUI", "HTML5", "CSS3", "JavaScript"],
+    "description": "Fullstack Web Developer & Software Developer specializing in web application development, script automation, and responsive web systems."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --accent-glow: rgba(56, 189, 248, 0.35);
+      --border: #334155;
+      --gradient-accent: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Scroll Progress Bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--gradient-accent);
+      width: 0%;
+      z-index: 101;
+      transition: width 0.1s linear;
+    }
+
+    /* Custom glow cursor */
+    #cursor-glow {
+      position: fixed;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56,189,248,0.12) 0%, rgba(15,23,42,0) 70%);
+      pointer-events: none;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.4s ease;
+      opacity: 0;
+    }
+
+    /* Particle canvas background */
+    #particle-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Glowing Background Orbs */
+    .bg-orb {
+      position: fixed;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-glow) 0%, rgba(15,23,42,0) 70%);
+      pointer-events: none;
+      z-index: 0;
+      animation: floatOrb 12s infinite alternate ease-in-out;
+    }
+
+    .orb-1 { top: -50px; left: -100px; }
+    .orb-2 { bottom: 10%; right: -100px; animation-delay: -6s; }
+    .orb-3 { top: 40%; left: 45%; width: 250px; height: 250px; opacity: 0.6; animation-delay: -3s; animation-duration: 16s; }
+
+    @keyframes floatOrb {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(60px, 80px) scale(1.2); }
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.85) translateY(20px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    @keyframes drawLine {
+      from { width: 0; }
+      to { width: 50px; }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 4px 18px var(--accent-glow); }
+      50% { box-shadow: 0 4px 30px rgba(56, 189, 248, 0.6); }
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      background: var(--gradient-accent);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+      animation: gradientShift 6s ease infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after, .nav-links a:focus::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover, .nav-links a:focus {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    main {
+      margin-top: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 6rem 2rem 3rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .hero-illustration {
+      position: relative;
+      width: 220px;
+      height: 190px;
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out 0s forwards;
+    }
+
+    .hero-illustration svg {
+      width: 100%;
+      height: 100%;
+      animation: floatY 5s ease-in-out 1s infinite;
+    }
+
+    .tech-badge {
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+      animation: floatY 4s ease-in-out infinite;
+    }
+
+    .tech-badge.py   { color: #38bdf8; top: -10px; left: -18px; animation-delay: 0.2s; }
+    .tech-badge.js   { color: #facc15; top: 10px;  right: -22px; animation-delay: 1s; }
+    .tech-badge.html { color: #fb923c; bottom: 15px; left: -26px; animation-delay: 1.8s; }
+    .tech-badge.git  { color: #f87171; bottom: -12px; right: -10px; animation-delay: 0.6s; }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.75rem;
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out 0.85s forwards;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover, .social-icons a:focus {
+      color: var(--bg);
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px var(--accent-glow);
+    }
+
+    .hero-greeting {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out 0.1s forwards;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out 0.25s forwards;
+    }
+
+    .highlight-name {
+      background: var(--gradient-accent);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 6s ease infinite;
+    }
+
+    .typewriter-container {
+      font-size: 1.6rem;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+      min-height: 2.2rem;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out 0.4s forwards;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      height: 1.3em;
+      background-color: var(--accent);
+      margin-left: 5px;
+      animation: blink 0.8s infinite;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      max-width: 620px;
+      margin-bottom: 2.25rem;
+      font-size: 1.15rem;
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out 0.55s forwards;
+    }
+
+    .hero .btn {
+      opacity: 0;
+      animation: fadeInUp 0.7s ease-out 0.7s forwards, pulseGlow 2.5s ease-in-out 2s infinite;
+    }
+
+    .btn {
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: #0f172a;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0 4px 18px var(--accent-glow);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn:hover, .btn:focus {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
+    }
+
+    .btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(0);
+      animation: ripple 0.6s linear;
+      pointer-events: none;
+    }
+
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 4px;
+      background: var(--gradient-accent);
+      border-radius: 2px;
+    }
+
+    section.visible .section-title::after {
+      animation: drawLine 0.6s ease-out 0.2s both;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      border-radius: 12px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      opacity: 0;
+    }
+
+    section.visible .skill-card {
+      animation: popIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    section.visible .skill-card:nth-child(1) { animation-delay: 0.1s; }
+    section.visible .skill-card:nth-child(2) { animation-delay: 0.25s; }
+    section.visible .skill-card:nth-child(3) { animation-delay: 0.4s; }
+    section.visible .skill-card:nth-child(4) { animation-delay: 0.55s; }
+
+    .skill-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      border-color: var(--accent);
+      box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
+    }
+
+    .skill-card i.skill-icon {
+      display: block;
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 0.85rem;
+      color: var(--accent);
+      font-size: 1.25rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity: 0;
+    }
+
+    section.visible .project-card {
+      animation: popIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    section.visible .project-card:nth-child(1) { animation-delay: 0.1s; }
+    section.visible .project-card:nth-child(2) { animation-delay: 0.3s; }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
+    }
+
+    .project-card .project-icon {
+      font-size: 1.9rem;
+      color: var(--accent);
+    }
+
+    .project-card h3 {
+      font-size: 1.3rem;
+    }
+
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      width: fit-content;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
+
+    .project-status.live {
+      color: #4ade80;
+      background: rgba(74, 222, 128, 0.12);
+      border: 1px solid rgba(74, 222, 128, 0.35);
+    }
+
+    .project-status.progress {
+      color: #facc15;
+      background: rgba(250, 204, 21, 0.12);
+      border: 1px solid rgba(250, 204, 21, 0.35);
+    }
+
+    .project-status.progress i {
+      animation: blink 1.4s infinite;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-tags span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+    }
+
+    .project-card .project-link {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: gap 0.3s ease, color 0.3s ease;
+    }
+
+    .project-card .project-link:hover {
+      gap: 0.8rem;
+      color: var(--accent-hover);
+    }
+
+    .project-card .project-link.disabled {
+      color: var(--text-muted);
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .timeline-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      border-radius: 12px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    section.visible .timeline-item {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    section.visible .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+    section.visible .timeline-item:nth-child(2) { animation-delay: 0.3s; }
+    section.visible .timeline-item:nth-child(3) { animation-delay: 0.5s; }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--gradient-accent);
+      opacity: 0.3;
+      transition: opacity 0.3s ease, width 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateX(8px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+    }
+
+    .timeline-item:hover::before {
+      opacity: 1;
+      width: 6px;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.3rem;
+    }
+
+    .timeline-item .role {
+      color: var(--accent);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-item .date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .contact-form {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+      border-radius: 12px;
+      max-width: 650px;
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.5);
+      position: relative;
+      opacity: 0;
+    }
+
+    section.visible .contact-form {
+      animation: fadeInUp 0.7s ease-out 0.15s forwards;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 0.9rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 12px var(--accent-glow);
+    }
+
+    #form-status {
+      margin-top: 1.25rem;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 0.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .typewriter-container { font-size: 1.25rem; }
+      section { padding: 4rem 1.5rem 2rem; }
+      #cursor-glow { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div id="progress-bar"></div>
+
+  <!-- Particle background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Cursor glow -->
+  <div id="cursor-glow"></div>
+
+  <!-- Background Orbs -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <header>
+    <nav aria-label="Main Navigation">
+      <div class="nav-container">
+        <a href="#about" class="logo" id="nav-name">Mukesh Thakur</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero visible" id="about" aria-labelledby="hero-name">
+      <div class="hero-illustration">
+        <svg viewBox="0 0 220 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a laptop with code brackets">
+          <defs>
+            <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8"/>
+              <stop offset="100%" stop-color="#818cf8"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="110" cy="172" rx="85" ry="10" fill="#000" opacity="0.25"/>
+          <rect x="40" y="30" width="140" height="95" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+          <rect x="50" y="40" width="120" height="75" rx="4" fill="url(#screenGrad)" opacity="0.18"/>
+          <text x="110" y="88" text-anchor="middle" font-family="monospace" font-size="26" fill="#38bdf8" font-weight="700">&lt;/&gt;</text>
+          <path d="M25 125 L195 125 L210 150 Q212 158 202 158 L18 158 Q8 158 10 150 Z" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+          <rect x="85" y="132" width="50" height="6" rx="3" fill="#0f172a"/>
+          <circle cx="35" cy="45" r="10" fill="#818cf8" opacity="0.65"/>
+          <circle cx="188" cy="18" r="7" fill="#c084fc" opacity="0.65"/>
+          <circle cx="20" cy="100" r="5" fill="#38bdf8" opacity="0.65"/>
+        </svg>
+        <span class="tech-badge py" title="Python"><i class="fa-brands fa-python"></i></span>
+        <span class="tech-badge js" title="JavaScript"><i class="fa-brands fa-js"></i></span>
+        <span class="tech-badge html" title="HTML5"><i class="fa-brands fa-html5"></i></span>
+        <span class="tech-badge git" title="Git"><i class="fa-brands fa-git-alt"></i></span>
+      </div>
+      <span class="hero-greeting">Hello, I'm</span>
+      <h1 id="hero-name"><span class="highlight-name">Mukesh Thakur</span></h1>
+      <div class="typewriter-container">
+        <span id="typewriter-text"></span><span class="cursor"></span>
+      </div>
+      <p>Building high-performance fullstack web applications, custom software solutions, and automated workflows using Python, Selenium, PyAutoGUI, and modern JavaScript frameworks.</p>
+      <a href="#contact" class="btn">Get In Touch</a>
+      <div class="social-icons">
+        <a href="https://github.com/Mukesh-Since-2002" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/mukesh-thakur-developer" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:mukesht9930@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" class="section-title"><i class="fa-solid fa-layer-group" style="color:var(--accent); margin-right:0.6rem;"></i>Skills & Expertise</h2>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <i class="fa-solid fa-code skill-icon"></i>
+          <h3>Fullstack Web Development</h3>
+          <p>HTML5, CSS3, JavaScript (ES6+), Modern Frontend Frameworks, Responsive UI & API Integrations.</p>
+        </article>
+        <article class="skill-card">
+          <i class="fa-solid fa-robot skill-icon"></i>
+          <h3>Software & Script Automation</h3>
+          <p>Python Development, Selenium WebDriver, PyAutoGUI, Web Scraping, Desktop GUI Applications.</p>
+        </article>
+        <article class="skill-card">
+          <i class="fa-solid fa-server skill-icon"></i>
+          <h3>Systems & IT Integration</h3>
+          <p>VDI Operational Workflows, Automated Ticket Systems, Process Optimization & Technical Logistics.</p>
+        </article>
+        <article class="skill-card">
+          <i class="fa-solid fa-database skill-icon"></i>
+          <h3>Database & API Support</h3>
+          <p>MySQL query writing for CRUD operations (create, read, update, delete), plus verifying API request/response calls for issue diagnosis and data integrity checks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="section-title"><i class="fa-solid fa-diagram-project" style="color:var(--accent); margin-right:0.6rem;"></i>Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <i class="fa-solid fa-boxes-stacked project-icon"></i>
+          <span class="project-status live"><i class="fa-solid fa-circle-check"></i>Completed</span>
+          <h3>FlowStock Web App</h3>
+          <p>A web application to manage stock, track items, and streamline inventory operations end-to-end.</p>
+          <div class="project-tags">
+            <span>Web App</span>
+            <span>Inventory</span>
+          </div>
+          <!-- Replace YOUR_GITHUB_REPO_LINK below with your project's GitHub URL -->
+          <a href="https://flow-stock-bay.vercel.app" target="_blank" rel="noopener" class="project-link">
+            <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </article>
+        <article class="project-card">
+          <i class="fa-solid fa-hammer project-icon"></i>
+          <span class="project-status progress"><i class="fa-solid fa-circle-dot"></i>In Progress</span>
+          <h3>Chatify (Coming Soon)</h3>
+          <p>Currently being built. The link and full details will be added here once it's ready to share.</p>
+          <div class="project-tags">
+            <span>In Development</span>
+          </div>
+          <span class="project-link disabled"><i class="fa-solid fa-hourglass-half"></i> Link coming soon</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading" class="section-title"><i class="fa-solid fa-timeline" style="color:var(--accent); margin-right:0.6rem;"></i>Professional Experience</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <h3><i class="fa-solid fa-briefcase" style="color:var(--accent); margin-right:0.5rem;"></i>Fullstack & Software Developer</h3>
+          <div class="role">Operations & Digital Systems</div>
+          <div class="date"><time datetime="2024">Present</time></div>
+          <p>Engineering robust fullstack interfaces, automating support ticket processing workflows, and designing desktop automation software in Python to optimize operational performance.</p>
+        </article>
+        <article class="timeline-item">
+          <h3><i class="fa-solid fa-headset" style="color:var(--accent); margin-right:0.5rem;"></i>Support Engineer</h3>
+          <div class="role">Empezar Digital &mdash; Tech Support</div>
+          <div class="date"><time datetime="2023">2023</time> - <time datetime="2024">2024</time></div>
+          <p>Provided technical support backed by MySQL, writing SQL queries to check, update, create, and delete records for issue diagnosis and resolution. Verified API request and response calls to trace failures and confirm data integrity across integrated systems.</p>
+        </article>
+        <article class="timeline-item">
+          <h3><i class="fa-solid fa-laptop-code" style="color:var(--accent); margin-right:0.5rem;"></i>Automation & Web Solutions Engineer</h3>
+          <div class="role">Independent Projects</div>
+          <div class="date"><time datetime="2024">2024</time> - Present</div>
+          <p>Architecting browser automation platforms with Selenium, building custom GUI automation software, and developing responsive web applications using fullstack web technologies.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="section-title"><i class="fa-solid fa-paper-plane" style="color:var(--accent); margin-right:0.6rem;"></i>Contact Me</h2>
+      <div class="contact-container">
+        <!--
+          IMPORTANT — read this before the form will actually deliver mail to you:
+          This form posts to Formspree (https://formspree.io), a free service that
+          relays browser form submissions straight to your inbox — no backend needed.
+
+          1. Go to https://formspree.io and sign up free with mukesht9930@gmail.com
+          2. Create a new form; Formspree gives you an endpoint like
+             https://formspree.io/f/xxxxabcd
+          3. Replace YOUR_FORM_ID below (in the form's action attribute AND in the
+             fetch() call in the script) with that ID.
+          4. Formspree emails you a confirmation link the first time — click it once
+             to activate the form.
+          Until you do this, the script automatically falls back to opening the
+          visitor's email client (mailto:) so nothing is ever silently lost.
+        -->
+        <form class="contact-form" id="portfolio-form" aria-label="Contact form"
+              action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name"><i class="fa-solid fa-user" style="color:var(--accent); margin-right:0.4rem;"></i>Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email"><i class="fa-solid fa-envelope" style="color:var(--accent); margin-right:0.4rem;"></i>Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="name@example.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="message"><i class="fa-solid fa-message" style="color:var(--accent); margin-right:0.4rem;"></i>Message</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Write your message..."></textarea>
+          </div>
+          <button type="submit" class="btn" id="submit-btn"><i class="fa-solid fa-paper-plane" style="margin-right:0.5rem;"></i>Send Message</button>
+          <div id="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <address style="font-style: normal;">
+      <p>&copy; <span id="year"></span> Mukesh Thakur. All rights reserved.</p>
+    </address>
+  </footer>
+
+  <script>
+    // 1. Dynamic Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // 2. Scroll Reveal Animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // 3. Dynamic Typewriter Effect
+    const titles = [
+      "Fullstack Web Developer",
+      "Software Developer",
+      "Python & Automation Specialist"
+    ];
+
+    const typewriterElement = document.getElementById('typewriter-text');
+    let titleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentTitle = titles[titleIndex];
+
+      if (isDeleting) {
+        typewriterElement.textContent = currentTitle.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typewriterElement.textContent = currentTitle.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typeSpeed = isDeleting ? 40 : 80;
+
+      if (!isDeleting && charIndex === currentTitle.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        titleIndex = (titleIndex + 1) % titles.length;
+        typeSpeed = 500;
+      }
+
+      setTimeout(typeEffect, typeSpeed);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('year').textContent = new Date().getFullYear();
+      setTimeout(typeEffect, 500);
+    });
+
+    // 4. Interactive Button Ripple Effect
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const ripple = document.createElement('span');
+        ripple.className = 'btn-ripple';
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        this.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // 5. Cursor glow that follows the mouse
+    const cursorGlow = document.getElementById('cursor-glow');
+    if (window.matchMedia('(pointer: fine)').matches) {
+      window.addEventListener('mousemove', (e) => {
+        cursorGlow.style.opacity = '1';
+        cursorGlow.style.left = e.clientX + 'px';
+        cursorGlow.style.top = e.clientY + 'px';
+      });
+      window.addEventListener('mouseleave', () => {
+        cursorGlow.style.opacity = '0';
+      });
+    }
+
+    // 6. Lightweight floating particle background
+    (function initParticles() {
+      const canvas = document.getElementById('particle-canvas');
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let width, height;
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      const COUNT = Math.min(60, Math.floor((width * height) / 25000));
+      for (let i = 0; i < COUNT; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 1.6 + 0.4,
+          vx: (Math.random() - 0.5) * 0.25,
+          vy: (Math.random() - 0.5) * 0.25,
+          alpha: Math.random() * 0.5 + 0.15
+        });
+      }
+
+      function tick() {
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = '#38bdf8';
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
+
+          ctx.globalAlpha = p.alpha;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1;
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+
+    // 7. Contact form: submit to Formspree, with a mailto fallback if it's not
+    // configured yet or the request fails (e.g. offline).
+    const form = document.getElementById('portfolio-form');
+    const status = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+    const FORM_ENDPOINT = form.getAttribute('action');
+    const RECIPIENT_EMAIL = 'mukesht9930@gmail.com';
+
+    function mailtoFallback(name, email, message) {
+      window.location.href =
+        `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent('Portfolio Contact from ' + name)}` +
+        `&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + email + ')')}`;
+      status.style.color = '#38bdf8';
+      status.textContent = 'Opening your email client to send this to ' + RECIPIENT_EMAIL + '...';
+    }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      status.style.color = '#38bdf8';
+      status.textContent = 'Sending your message...';
+
+      const notConfigured = !FORM_ENDPOINT || FORM_ENDPOINT.includes('mukesht9930@gmail.com');
+
+      if (notConfigured) {
+        mailtoFallback(name, email, message);
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        setTimeout(() => { status.textContent = ''; }, 6000);
+        return;
+      }
+
+      try {
+        const response = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+
+        if (response.ok) {
+          status.style.color = '#4ade80';
+          status.textContent = 'Thank you! Your message was sent successfully to ' + RECIPIENT_EMAIL + '.';
+          form.reset();
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (error) {
+        console.warn('Form submission error, falling back to mailto:', error);
+        mailtoFallback(name, email, message);
+        form.reset();
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+        setTimeout(() => { status.textContent = ''; }, 6000);
+      }
+    });
+  </script>
+</body>
+</html>
