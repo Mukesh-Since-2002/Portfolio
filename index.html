@@ -13,27 +13,27 @@
   <meta name="language" content="English">
   <meta name="theme-color" content="#0f172a">
 
-  <!-- Favicon (replace images/favicon.png with your own icon file) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
-  <!-- Font Awesome icon library (CDN, no download needed) -->
+  <!-- Font Awesome icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourwebsite.com/">
+  <meta property="og:url" content="https://flow-stock-bay.vercel.app">
   <meta property="og:title" content="Mukesh Thakur | Fullstack Web Developer & Software Developer">
   <meta property="og:description" content="Explore fullstack applications, software development projects, and automation tools by Mukesh Thakur.">
-  <meta property="og:image" content="https://yourwebsite.com/preview-image.jpg">
+  <meta property="og:image" content="https://flow-stock-bay.vercel.app/preview-image.jpg">
 
   <!-- Twitter Card -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://yourwebsite.com/">
+  <meta property="twitter:url" content="https://flow-stock-bay.vercel.app">
   <meta property="twitter:title" content="Mukesh Thakur | Fullstack Web Developer & Software Developer">
   <meta property="twitter:description" content="Explore fullstack applications, software development projects, and automation tools by Mukesh Thakur.">
-  <meta property="twitter:image" content="https://yourwebsite.com/preview-image.jpg">
+  <meta property="twitter:image" content="https://flow-stock-bay.vercel.app/preview-image.jpg">
 
   <!-- Structured Data / JSON-LD Schema -->
   <script type="application/ld+json">
@@ -41,6 +41,11 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mukesh Thakur",
+    "url": "https://flow-stock-bay.vercel.app",
+    "sameAs": [
+      "https://github.com/Mukesh-Since-2002",
+      "https://linkedin.com/in/mukesh-thakur-developer"
+    ],
     "jobTitle": "Fullstack Web Developer & Software Developer",
     "email": "mailto:mukesht9930@gmail.com",
     "knowsAbout": ["Fullstack Web Development", "Software Engineering", "Python", "Selenium", "PyAutoGUI", "HTML5", "CSS3", "JavaScript"],
@@ -870,9 +875,8 @@
             <span>Web App</span>
             <span>Inventory</span>
           </div>
-          <!-- Replace YOUR_GITHUB_REPO_LINK below with your project's GitHub URL -->
           <a href="https://flow-stock-bay.vercel.app" target="_blank" rel="noopener" class="project-link">
-            <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-brands fa-github"></i> View Live App <i class="fa-solid fa-arrow-right"></i>
           </a>
         </article>
         <article class="project-card">
@@ -915,21 +919,6 @@
     <section id="contact" aria-labelledby="contact-heading">
       <h2 id="contact-heading" class="section-title"><i class="fa-solid fa-paper-plane" style="color:var(--accent); margin-right:0.6rem;"></i>Contact Me</h2>
       <div class="contact-container">
-        <!--
-          IMPORTANT — read this before the form will actually deliver mail to you:
-          This form posts to Formspree (https://formspree.io), a free service that
-          relays browser form submissions straight to your inbox — no backend needed.
-
-          1. Go to https://formspree.io and sign up free with mukesht9930@gmail.com
-          2. Create a new form; Formspree gives you an endpoint like
-             https://formspree.io/f/xxxxabcd
-          3. Replace YOUR_FORM_ID below (in the form's action attribute AND in the
-             fetch() call in the script) with that ID.
-          4. Formspree emails you a confirmation link the first time — click it once
-             to activate the form.
-          Until you do this, the script automatically falls back to opening the
-          visitor's email client (mailto:) so nothing is ever silently lost.
-        -->
         <form class="contact-form" id="portfolio-form" aria-label="Contact form"
               action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
           <div class="form-group">
@@ -973,191 +962,167 @@
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('section').forEach(section => {
       observer.observe(section);
     });
 
-    // 3. Dynamic Typewriter Effect
-    const titles = [
-      "Fullstack Web Developer",
-      "Software Developer",
-      "Python & Automation Specialist"
-    ];
-
-    const typewriterElement = document.getElementById('typewriter-text');
-    let titleIndex = 0;
+    // 3. Typewriter Effect
+    const words = ["Fullstack Web Developer", "Software Developer", "Python Automation Specialist"];
+    let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
+    const typewriterElement = document.getElementById('typewriter-text');
 
     function typeEffect() {
-      const currentTitle = titles[titleIndex];
-
+      const currentWord = words[wordIndex];
       if (isDeleting) {
-        typewriterElement.textContent = currentTitle.substring(0, charIndex - 1);
+        typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
         charIndex--;
       } else {
-        typewriterElement.textContent = currentTitle.substring(0, charIndex + 1);
+        typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
         charIndex++;
       }
 
       let typeSpeed = isDeleting ? 40 : 80;
 
-      if (!isDeleting && charIndex === currentTitle.length) {
-        typeSpeed = 2000;
+      if (!isDeleting && charIndex === currentWord.length) {
+        typeSpeed = 2000; // Pause at end of word
         isDeleting = true;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
-        titleIndex = (titleIndex + 1) % titles.length;
-        typeSpeed = 500;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 400; // Pause before typing next word
       }
 
       setTimeout(typeEffect, typeSpeed);
     }
+    document.addEventListener('DOMContentLoaded', typeEffect);
 
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('year').textContent = new Date().getFullYear();
-      setTimeout(typeEffect, 500);
-    });
-
-    // 4. Interactive Button Ripple Effect
-    document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        const rect = this.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const ripple = document.createElement('span');
-        ripple.className = 'btn-ripple';
-        ripple.style.left = `${x}px`;
-        ripple.style.top = `${y}px`;
-        this.appendChild(ripple);
-        setTimeout(() => ripple.remove(), 600);
-      });
-    });
-
-    // 5. Cursor glow that follows the mouse
+    // 4. Cursor Glow Tracking
     const cursorGlow = document.getElementById('cursor-glow');
-    if (window.matchMedia('(pointer: fine)').matches) {
-      window.addEventListener('mousemove', (e) => {
-        cursorGlow.style.opacity = '1';
-        cursorGlow.style.left = e.clientX + 'px';
-        cursorGlow.style.top = e.clientY + 'px';
-      });
-      window.addEventListener('mouseleave', () => {
-        cursorGlow.style.opacity = '0';
-      });
+    document.addEventListener('mousemove', (e) => {
+      cursorGlow.style.left = e.clientX + 'px';
+      cursorGlow.style.top = e.clientY + 'px';
+      cursorGlow.style.opacity = '1';
+    });
+    document.addEventListener('mouseleave', () => {
+      cursorGlow.style.opacity = '0';
+    });
+
+    // 5. Interactive Particle Canvas
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.4;
+        this.speedY = (Math.random() - 0.5) * 0.4;
+        this.alpha = Math.random() * 0.5 + 0.1;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.fillStyle = `rgba(56, 189, 248, ${this.alpha})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
     }
 
-    // 6. Lightweight floating particle background
-    (function initParticles() {
-      const canvas = document.getElementById('particle-canvas');
-      const ctx = canvas.getContext('2d');
-      let particles = [];
-      let width, height;
+    for (let i = 0; i < 45; i++) {
+      particles.push(new Particle());
+    }
 
-      function resize() {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-      }
-      window.addEventListener('resize', resize);
-      resize();
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
 
-      const COUNT = Math.min(60, Math.floor((width * height) / 25000));
-      for (let i = 0; i < COUNT; i++) {
-        particles.push({
-          x: Math.random() * width,
-          y: Math.random() * height,
-          r: Math.random() * 1.6 + 0.4,
-          vx: (Math.random() - 0.5) * 0.25,
-          vy: (Math.random() - 0.5) * 0.25,
-          alpha: Math.random() * 0.5 + 0.15
-        });
-      }
+    // 6. Set Dynamic Footer Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-      function tick() {
-        ctx.clearRect(0, 0, width, height);
-        ctx.fillStyle = '#38bdf8';
-        particles.forEach(p => {
-          p.x += p.vx;
-          p.y += p.vy;
-          if (p.x < 0) p.x = width;
-          if (p.x > width) p.x = 0;
-          if (p.y < 0) p.y = height;
-          if (p.y > height) p.y = 0;
+    // 7. Button Ripple Effect
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('click', function (e) {
+        const circle = document.createElement('span');
+        const diameter = Math.max(this.clientWidth, this.clientHeight);
+        const radius = diameter / 2;
+        const rect = this.getBoundingClientRect();
+        
+        circle.style.width = circle.style.height = `${diameter}px`;
+        circle.style.left = `${e.clientX - rect.left - radius}px`;
+        circle.style.top = `${e.clientY - rect.top - radius}px`;
+        circle.classList.add('btn-ripple');
 
-          ctx.globalAlpha = p.alpha;
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fill();
-        });
-        ctx.globalAlpha = 1;
-        requestAnimationFrame(tick);
-      }
-      tick();
-    })();
+        const ripple = this.getElementsByClassName('btn-ripple')[0];
+        if (ripple) {
+          ripple.remove();
+        }
+        this.appendChild(circle);
+      });
+    });
 
-    // 7. Contact form: submit to Formspree, with a mailto fallback if it's not
-    // configured yet or the request fails (e.g. offline).
+    // 8. Contact Form Fallback
     const form = document.getElementById('portfolio-form');
     const status = document.getElementById('form-status');
-    const submitBtn = document.getElementById('submit-btn');
-    const FORM_ENDPOINT = form.getAttribute('action');
-    const RECIPIENT_EMAIL = 'mukesht9930@gmail.com';
 
-    function mailtoFallback(name, email, message) {
-      window.location.href =
-        `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent('Portfolio Contact from ' + name)}` +
-        `&body=${encodeURIComponent(message + '\n\nFrom: ' + name + ' (' + email + ')')}`;
-      status.style.color = '#38bdf8';
-      status.textContent = 'Opening your email client to send this to ' + RECIPIENT_EMAIL + '...';
-    }
-
-    form.addEventListener('submit', async function (e) {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-      status.style.color = '#38bdf8';
-      status.textContent = 'Sending your message...';
-
-      const notConfigured = !FORM_ENDPOINT || FORM_ENDPOINT.includes('mukesht9930@gmail.com');
-
-      if (notConfigured) {
-        mailtoFallback(name, email, message);
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-        setTimeout(() => { status.textContent = ''; }, 6000);
+      const action = form.getAttribute('action');
+      
+      if (action.includes('YOUR_FORM_ID')) {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        window.location.href = `mailto:mukesht9930@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AReply to: ${encodeURIComponent(email)}`;
+        status.style.color = '#38bdf8';
+        status.textContent = 'Opening your email client...';
         return;
       }
 
+      const data = new FormData(form);
       try {
-        const response = await fetch(FORM_ENDPOINT, {
+        const response = await fetch(action, {
           method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: new FormData(form)
+          body: data,
+          headers: { 'Accept': 'application/json' }
         });
-
         if (response.ok) {
           status.style.color = '#4ade80';
-          status.textContent = 'Thank you! Your message was sent successfully to ' + RECIPIENT_EMAIL + '.';
+          status.textContent = 'Message sent successfully!';
           form.reset();
         } else {
-          throw new Error('Submission failed');
+          throw new Error();
         }
-      } catch (error) {
-        console.warn('Form submission error, falling back to mailto:', error);
-        mailtoFallback(name, email, message);
-        form.reset();
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
-        setTimeout(() => { status.textContent = ''; }, 6000);
+      } catch (err) {
+        status.style.color = '#f87171';
+        status.textContent = 'Failed to submit form. Please use direct email link.';
       }
     });
   </script>
